@@ -19,5 +19,4 @@ RUN rm -rf blitz
 
 RUN docker-php-ext-install xsl intl sockets bcmath pdo pdo_mysql mysqli soap
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN apt-get remove --purge -y git
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $buildDeps
