@@ -19,4 +19,9 @@ RUN rm -rf blitz
 
 RUN docker-php-ext-install xsl intl sockets bcmath pdo pdo_mysql mysqli soap
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN curl -Ls https://phar.phpunit.de/phpunit-skelgen.phar --output phpunit-skelgen.phar
+RUN chmod +x phpunit-skelgen.phar
+RUN mv phpunit-skelgen.phar /usr/local/bin/phpunit-skelgen
+
 RUN apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $buildDeps
