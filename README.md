@@ -1,6 +1,6 @@
 # docker-php7
 
-php7.3-fpm Dockerfile with imagick, blitz, pdo_mysql
+php7.4-fpm Dockerfile with imagick, blitz, pdo_mysql
 
 docker-compose.yml example:
 

@@ -1,5 +1,6 @@
-FROM php:7.3-fpm
+FROM php:7.4-fpm
 
+ADD ./php.ini /usr/local/etc/php/php.ini
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends libxml2-dev
 RUN apt-get install -y libmagickwand-dev libmagickcore-dev libmagickwand-dev libcurl3-dev curl libxslt-dev unzip git
