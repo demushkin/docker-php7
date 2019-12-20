@@ -8,11 +8,11 @@ RUN apt-get install -y libmagickwand-dev libmagickcore-dev libmagickwand-dev lib
 RUN pecl channel-update pecl.php.net
 RUN pecl install imagick >/dev/null 2>&1 || { retVal=$?; true; }
 RUN docker-php-ext-enable imagick
-RUN pecl install xdebug-2.7.0RC2  >/dev/null 2>&1 || { retVal=$?; true; }
-RUN docker-php-ext-enable xdebug
+#RUN pecl install xdebug-2.7.0RC2  >/dev/null 2>&1 || { retVal=$?; true; }
+#RUN docker-php-ext-enable xdebug
 
-RUN pecl install swoole
-RUN docker-php-ext-enable swoole
+#RUN pecl install swoole
+#RUN docker-php-ext-enable swoole
 
 WORKDIR /usr/src/
 RUN git clone -b php7 https://github.com/alexeyrybak/blitz.git
